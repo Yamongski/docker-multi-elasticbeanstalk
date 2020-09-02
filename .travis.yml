@@ -20,3 +20,4 @@ after_success:
   - docker push yamongski/multi-nginx
   - docker push yamongski/multi-server
   - docker push yamongski/multi-worker
+  # building with travis
