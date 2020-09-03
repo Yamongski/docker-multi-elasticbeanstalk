@@ -10,9 +10,9 @@ script:
 
 after_success:
   - docker build -t yamongski/multi-client ./client
-  - docker build -t yamongski/multi-nginx ./nginx
-  - docker build -t yamongski/multi-server ./server
-  - docker build -t yamongski/multi-worker ./worker
+  - docker build -t yamongski/multi-nginx ./nginx/Dockerfile.dev
+  - docker build -t yamongski/multi-server ./server/Dockerfile.dev
+  - docker build -t yamongski/multi-worker ./worker/Dockerfile.dev
   # log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # take those images and push them to dockerhub
