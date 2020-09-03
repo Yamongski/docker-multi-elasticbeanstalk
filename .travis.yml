@@ -5,7 +5,7 @@ services:
 before_install:
   - docker build -t yamongski/react-test -f ./client/Dockerfile.dev ./client
 
-  script:
+script:
   - docker run -e CI=true yamongski/react-test npm test
 
 after_success:
