@@ -16,9 +16,9 @@ after_success:
   # log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # take those images and push them to dockerhub
-  - docker push yamongski/multi-client
+  - docker push yamongski/multi-worker
   - docker push yamongski/multi-nginx
   - docker push yamongski/multi-server
-  - docker push yamongski/multi-worker
+  - docker push yamongski/multi-client
 
   
